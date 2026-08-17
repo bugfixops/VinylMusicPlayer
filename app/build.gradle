@@ -1,3 +1,4 @@
+apply plugin: 'jacoco'
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
@@ -57,7 +58,9 @@ android {
         debug {
             applicationIdSuffix '.debug'
             versionNameSuffix ' DEBUG'
-        }
+                    testCoverageEnabled true
+            enableAndroidTestCoverage true
+}
     }
     signingConfigs {
         ci {

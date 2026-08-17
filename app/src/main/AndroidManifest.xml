@@ -233,6 +233,12 @@
             android:name="com.google.android.gms.car.notification.SmallIcon"
             android:resource="@drawable/ic_notification"/>
 
+            <receiver android:name=".JacocoInstrument.SMSInstrumentedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="edu.gatech.m3.emma.COLLECT_COVERAGE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
